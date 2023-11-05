@@ -1,5 +1,5 @@
 class Herramientas:
-     def __init__(self, lista_numeros): #importamos el modulo herramientas de la clase amterior
+    def __init__(self, lista_numeros): #importamos el modulo herramientas de la clase amterior
         if type (lista_numeros) != list : #como es una lista decximos que si la lista de numeros es distinto al tipo de lista, entonces :
          self.list=[] #creamos una lista vacia en donde se almacenen
          raise ValueError ("Se creo una lista vacia. se esperaba una lista de numeros enteros") #con raise salvamos el error y valuerror porque es un error de valor
@@ -7,7 +7,7 @@ class Herramientas:
          self.lista = lista_numeros
 
 
-     def verifica_primo(self):
+    def verifica_primo(self):
         lista_primos=[]#cremos una lista vacia donde almacenar los nros primos
         for i in self.lista: #por cada elemento en la lista vemos si es o no primo
             if (self.__verifica_primo(i)):
@@ -17,7 +17,7 @@ class Herramientas:
                # print('El elemento', i, 'NO es un numero primo') "LO MISMO PASA EN ELSE, PERO LE APPENDAMOS FALSE"
                 lista_primos.append(False)
 
-     def conversion_grados(self, origen, destino): #evaluamos si el origen y el destino son los que nosotros espermos 
+    def conversion_grados(self, origen, destino): #evaluamos si el origen y el destino son los que nosotros espermos 
         parametros_esperados= ["celsius", "farenheit", "kelvin"] #lo hacemos con una lista
         lista_conversion = [] #creamos una lista para guardar los resultados de la conversion
         if str(origen) not in parametros_esperados : #hacemos un loop para saber si el origen esta o no en parametros esperados
@@ -32,20 +32,19 @@ class Herramientas:
             return lista_conversion
         
 
-     def factorial(self):
+    def factorial(self):
         for i in self.lista:
             print('El factorial de ', i, 'es', self.__factorial(i))
 
-     def __verifica_primo(self, nro):
+    def __verifica_primo(self, nro):
         es_primo = True
         for i in range(2, nro):
-            
             if nro % i == 0:
                 es_primo = False
                 break
         return es_primo
 
-     def valor_modal(self, menor):
+    def valor_modal(self, menor):
         lista_unicos = []
         lista_repeticiones = []
         if len(self.lista) == 0:
@@ -69,7 +68,7 @@ class Herramientas:
                 maximo = lista_repeticiones[i]
         return moda, maximo
 
-     def __conversion_grados(self, valor, origen, destino):
+    def __conversion_grados(self, valor, origen, destino):
         valor_destino = None
         if (origen == 'celsius'):
             if (destino == 'celsius'):
@@ -102,7 +101,7 @@ class Herramientas:
             print('Parámetro de Origen incorrecto')
         return valor_destino
 
-     def __factorial(self, numero):
+    def __factorial(self, numero):
         if(type(numero) != int):
             return 'El numero debe ser un entero'
         if(numero < 0):
