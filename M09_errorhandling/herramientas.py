@@ -62,6 +62,7 @@ class Herramientas:
                 lista_unicos.append(elemento)
                 lista_repeticiones.append(1)
         moda = lista_unicos[0]
+        
         maximo = lista_repeticiones[0]
         for i, elemento in enumerate(lista_unicos):
             if lista_repeticiones[i] > maximo:
