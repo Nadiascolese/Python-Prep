@@ -266,6 +266,7 @@ while (sigue == 1):
     else:
         primo = True
     n += 1
+    
 
 
 # 15) Crear un ciclo while que encuentre dentro del rango de 100 a 300 el primer número divisible por 3 y además múltiplo de 6
