@@ -1,0 +1,52 @@
+def ciudadesPoblacion(ciudades):
+    ciudades_b = []
+    total_poblacion = 0
+    num_ciudades_b = 0
+    for ciudad, poblacion in ciudades.items():
+        if ciudad.lower().startswith('b'):
+            ciudades_b.append([ciudad, poblacion])
+            total_poblacion += poblacion
+            num_ciudades_b += 1
+    promedio_poblacion = total_poblacion / num_ciudades_b
+    ciudades_b.append(['promedio', promedio_poblacion])
+    return ciudades_b
+
+ INICIALIZACION DE VARIABLES:
+
+Dentro de la función, se crean tres variables:
+ciudades_b: Esta es una lista vacía que se utilizará para almacenar las ciudades cuyo nombre comienza con la letra "b" y su población correspondiente.
+total_poblacion: Esta variable se inicializa a 0 y se utilizará para almacenar la suma total de la población de las ciudades que comienzan con "b".
+num_ciudades_b: Esta variable se inicializa a 0 y se utilizará para contar el número de ciudades que comienzan con "b".
+
+. RECORRIDO DEL DICCIONARIO:
+
+El código utiliza un bucle for para iterar sobre los pares clave-valor del diccionario ciudades. En cada iteración:
+ciudad representa la clave (nombre de la ciudad) del par actual.
+poblacion representa el valor (población de la ciudad) del par actual.
+
+. FILTRADO DE CIUDADES:
+
+Dentro del bucle for, se utiliza la condición ciudad.lower().startswith('b') para verificar si el nombre de la ciudad en minúsculas comienza con la letra "b".
+ciudad.lower() convierte el nombre de la ciudad a minúsculas para evitar problemas de mayúsculas y minúsculas.
+startswith('b') comprueba si la cadena comienza con la letra "b".
+
+. ALMACENAMIENTO DE CIUDADES GUARDADAS:
+
+Si la condición se cumple (es decir, si el nombre de la ciudad comienza con "b"), la ciudad y su población se agregan a la lista ciudades_b usando el método append.
+También se agrega la población de la ciudad al total_poblacion y se incrementa el num_ciudades_b en 1.
+
+. CALCULO DEL PROMEDIO:
+
+Después del bucle for, se calcula el promedio de la población de las ciudades que comienzan con "b" dividiendo el total_poblacion por el num_ciudades_b
+ y almacenando el resultado en la variable promedio_poblacion.
+
+. AGREGARPROMEDIO A LA LISTA:
+
+Se agrega un nuevo elemento a la lista ciudades_b con la clave 'promedio' y el valor promedio_poblacion.
+
+. RETORNO:
+
+Finalmente, la función ciudadesPoblacion devuelve la lista ciudades_b que contiene las ciudades que comienzan con "b" 
+y su población correspondiente, junto con el promedio de la población.
+En resumen, este código filtra las ciudades cuyo nombre comienza con "b" del diccionario proporcionado, calcula la suma 
+total de su población, el número de ciudades y el promedio de la población, y devuelve una lista con esta información.
